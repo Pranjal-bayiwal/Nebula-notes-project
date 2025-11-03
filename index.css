@@ -1,5 +1,80 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-/* small helpers */
-body { @apply bg-slate-900 }
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Background gradient */
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main container */
+.app-container {
+  text-align: center;
+  padding: 3rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  width: 90%;
+  max-width: 600px;
+}
+
+/* Logo */
+.logo {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Floating logo animation */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Title and text */
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  margin-bottom: 2rem;
+}
+
+/* Button */
+.cta-btn {
+  background: #00bcd4;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #00acc1;
+  transform: scale(1.05);
+}
